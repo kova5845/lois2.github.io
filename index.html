@@ -1,0 +1,36 @@
+<!-- // Лабораторная работа 2 по дисциплине ЛОИС
+// Выполнена студентом группы 721701 БГУИР Коваленко Алексеем Васильевичем
+// Проверить является ли формула СДНФ
+// 24.02.2020
+//
+// https://learn.javascript.ru автор Коваленко Алексей
+// -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Лаба 1</title>
+	<meta charset="utf-8">
+	<style>
+		table td {
+			padding: 20px;
+			border: 1px solid black;
+		}
+	</style>
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<h1>Введите формулу</h1>
+	<input type="text" id="label" size="40">
+	<input type="button" name="button1" value="Vars" onclick="write_vars (document.getElementById('label').value)">
+	<input type="button" name="button2" value="OK" onclick="write_answer (document.getElementById('label').value)"><br>
+	Результат: <label id="lab"></label>
+	<div id="vars">
+
+	</div>
+	<div id='table'>
+		<table id='tab'></table>
+	</div>
+	<p><a href="test.html">Пройти тест</a></p>
+</body>
+</html>
