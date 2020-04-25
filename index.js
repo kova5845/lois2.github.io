@@ -156,13 +156,17 @@ function parse(str) {
 }
 
 function deleteVars(arr){
+	err = document.getElementById('err');
+	err.innerHTML = '';
 	vars = document.getElementById('vars');
 	if (arr.length > 0){
 		console.log(arr);
 		for (let i = 0; i < arr[0].length - 1; i++){
 			let el = document.getElementById(arr[0][i]).value;
-			if (parseInt(el) != 0 && parseInt(el) != 1 && el != '')
+			if (parseInt(el) != 0 && parseInt(el) != 1 && el != ''){
+				err.innerHTML = 'Некорректные переменные';
 				return null;
+			}
 			for (let j = 1; j < arr.length; j++){
 				if(arr[j][i] !== parseInt(el) && el !== ''){
 					arr.splice(j, 1);
